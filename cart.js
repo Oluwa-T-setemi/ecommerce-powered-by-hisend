@@ -181,3 +181,17 @@ buttonConfirm.addEventListener('click', () => {
     });
 });
 console.log(cartSectionOne.children)
+
+//////MOBILE
+// const btn = document.querySelector('.mobile-header');
+// const hamburger = document.getElementById('hamburger');
+// const navButtons = document.getElementById('mobile-log');
+
+//   hamburger.addEventListener('click', () => {
+//     navButtons.classList.add('hamburger');
+//     btn.classList.add('mobile-log');
+//   });
+//     btn.addEventListener('click', () => {
+//         navButtons.classList.remove('hamburger');
+//         btn.classList.remove('mobile-log');
+//     });
