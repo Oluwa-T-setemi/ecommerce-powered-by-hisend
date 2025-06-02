@@ -182,16 +182,44 @@ buttonConfirm.addEventListener('click', () => {
 });
 console.log(cartSectionOne.children)
 
-//////MOBILE
-// const btn = document.querySelector('.mobile-header');
-// const hamburger = document.getElementById('hamburger');
-// const navButtons = document.getElementById('mobile-log');
 
-//   hamburger.addEventListener('click', () => {
-//     navButtons.classList.add('hamburger');
-//     btn.classList.add('mobile-log');
-//   });
-//     btn.addEventListener('click', () => {
-//         navButtons.classList.remove('hamburger');
-//         btn.classList.remove('mobile-log');
-//     });
+     const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('mobile-log');
+
+let isOpen = false;
+
+function openMenu() {
+  navLinks.classList.remove('hide');
+  navLinks.classList.add('show');
+  navLinks.style.display = 'flex';
+  isOpen = true;
+}
+
+function closeMenu() {
+  navLinks.classList.remove('show');
+  navLinks.classList.add('hide');
+  setTimeout(() => {
+    navLinks.style.display = 'none';
+  }, 400);
+  isOpen = false;
+}
+
+hamburger.addEventListener('click', (e) => {
+  e.stopPropagation(); // stop click bubbling so document listener no fire here
+  if (!isOpen) {
+    openMenu();
+  } else {
+    closeMenu();
+  }
+});
+
+// Listen for clicks anywhere on the document
+document.addEventListener('click', (event) => {
+  // If menu is open AND click target is NOT inside navLinks or hamburger, close menu
+  if (isOpen && !navLinks.contains(event.target) && event.target !== hamburger) {
+    closeMenu();
+  }
+});
+
+
+ 
