@@ -76,7 +76,7 @@
       margin-top: -70px;
     }
 
-    .sidebar a {
+    /* .sidebar a {
       padding: 10px 15px;
       display: block;
       color: white;
@@ -85,8 +85,8 @@
 
     .sidebar a:hover {
       background-color: hsl(14, 25%, 72%);
-    }
-    .sidebar img {
+    } */
+    .logo{
       width: 100px;
       height: auto;
 
@@ -106,12 +106,12 @@
      margin-right: 100px;
    
     }
-    .setting img, .logout img, .profile img {
+    /* .setting img, .logout img, .profile img {
       width: 20px;
       height: 20px;
       margin-right: 10px;
     margin-bottom:15px ;
-    }
+    } */
     .setting :hover{
       background-color: hsl(14, 25%, 72%)
     }
@@ -143,11 +143,6 @@
     tr:hover {
       background-color: #f9f9f9;
     }
-     .card-container {
-   
-  
-    }
-
     .card {
       background-color: white;
       padding: 20px;
@@ -306,6 +301,26 @@ align-items: center;
       }
     #hamburger {
   display: none;
+}
+.btn{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+  border: none;
+  padding: 10px 0px;
+  width: 45%;
+  margin-bottom: 20px;
+}
+.btn img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+.btn a{
+  color: white;
+  text-decoration: none;
+
 }
 .home1 {
   display: none;
@@ -511,23 +526,28 @@ align-items: center;
   
       <div class="sidebar" id="sidebar">
            <div style="margin-left: 20px; margin-bottom:350px;" >
-    <img src="assets/images/ChatGPT Image May 21, 2025, 12_33_55 PM.png" alt="">
+          <img src="assets/images/ChatGPT Image May 21, 2025, 12_33_55 PM.png" alt="" class="logo">
     <div >
-      <div class="profile">
+      <!-- <div class="profile">
     <img src="assets/images/user (1).png" alt=""><a href="#">Profile</a>
-    </div>
-    <div class="setting">
+    </div> -->
+
+    <button class="btn">
+      <img src="assets/images/user (1).png" alt="" width="20px" height="1">
+      <a href="#">Profile</a>
+    </button>
+    <button class="btn">
       <img src="assets/images/settings (1).png" alt="">
       <a href="#">Settings</a>
-      </div>
-    <div class="logout">
+    </button>
+    <button class="btn">
       <img src="assets/images/logout.png" alt="">
-    <a href="#">Logout</a>
-     </div>
-        <div class="Home">
+      <a href="#">Logout</a>
+    </button>
+    <button class="btn">
       <img src="assets/images/home (2).png" alt="">
-    <a href="#">Home</a>
-    </div>
+      <a href="#">Home</a>
+    </button>
    
 </div>
 
