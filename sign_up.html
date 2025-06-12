@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/assets/images/ChatGPT Image May 21, 2025, 12_33_55 PM.png">
 </head>
 <style>
     *{
@@ -96,6 +97,7 @@
         background-color: hsl(14, 65%, 9%);
         border-top-right-radius: 15px;
         border-bottom-right-radius: 15px;
+        padding: 10px;
     }
     img{
         display: block;
@@ -134,7 +136,8 @@
         background-size: cover;
         background-position: center;
         animation: slider 50s infinite;
-        border-top-right-radius: 15px;
+        border-radius: 15px;
+        box-shadow: 2px 2px  10px hsl(13, 31%, 94%);
     }
     @keyframes slider{
         0%{background-image: url(/assets/images/image-brownie-desktop.jpg);}
@@ -166,6 +169,30 @@
         justify-content: center;
         margin-top: 0px;
     }
+    @media (max-width: 988px){
+        .container{
+            width: 90%;
+        }
+    }
+    @media (max-width: 768px){
+        .container{
+            width: 90%;
+            border-radius: 15px;
+        }
+        .image-page{
+            display: none;
+        }
+        .sign-up-page{
+            width: 100%;
+            border-radius: 15px;
+        }
+        button{
+            margin: 10px auto;
+        }
+        .sign-in{
+            margin: 2px 0;
+        }
+    }
 
 
 </style>
@@ -189,8 +216,8 @@
             </fieldset>
 
             <fieldset>
-                <legend>Address<span>*</span></legend>
-                <input class="input" type="text" placeholder="Enter your Address">
+                <legend>Phone Number<span>*</span></legend>
+                <input class="input" type="text" placeholder="Enter your Phone Number">
             </fieldset>
 
             <fieldset>
