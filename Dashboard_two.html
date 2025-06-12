@@ -230,6 +230,156 @@
         .wallet-balance:hover{
             transform: translateY(-8px);
         }
+
+    #dropdownButton {
+      position: relative;
+    }
+
+    #dropdownMenu {
+      display: block;
+      position: absolute;
+      top: 10%; /* Below the A button */
+      right: 0;
+      background-color: hsl(14, 65%, 9%);
+      width: 160px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+    }
+
+    #dropdownMenu a {
+      color: white;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    #dropdownMenu a:hover {
+      background-color: hsl(14, 25%, 72%);
+    }
+
+
+          @media (max-width: 768px) {
+            #hamburger {
+                display: block;
+                margin: 0 20px 0 0;
+            }
+            .setting img, .logout img, .profile img {
+                width: 32px;
+                height: 32px;
+                margin-right: 15px;
+                margin-bottom: 5px;
+            }
+            .Home img {
+                width: 32px;
+                height: 32px;
+                margin-right: 15px;
+                margin-bottom: 5px;
+            }
+            .sidebar {
+                display: none;
+                flex-direction: column;
+                background: linear-gradient(180deg, hsl(14, 80%, 12%), hsl(14, 60%, 20%));
+                position: fixed;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                z-index: 1001;
+                padding: 20px;
+            }
+            .sidebar.active {
+                display: flex;
+                overflow: hidden;
+            }
+            .close-sidebar {
+                display: block;
+            }
+            .navbar {
+                left: 0;
+                margin: 0;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .content {
+                margin-left: 0;
+                padding: 80px 15px;
+            }
+            .navbar div {
+                margin-right: 20px;
+            }
+            .card-container {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 90%;
+                margin-top: 50px;
+            }
+            .card {
+                width: 100%;
+            }
+            .cardh {
+                width: 100%;
+            }
+            .history {
+                flex-direction: column;
+                width: 90%;
+                margin-left: 5%;
+                gap: 15px;
+            }
+            .cardh:hover {
+                background-color: hsl(14, 25%, 72%);
+                color: white;
+                border-radius: 50px;
+            }
+            .card p {
+                font-size: 20px;
+            }
+            th, td {
+                font-size: 14px;
+                padding: 10px;
+            }
+            .setting img, .logout img, .profile img {
+                width: 32px;
+                height: 32px;
+                margin-right: 15px;
+                margin-top: 0;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .card h1 {
+                font-size: 28px;
+            }
+            .card-container {
+                width: 95%;
+            }
+            .wallet-table {
+                display: none;
+                width: 100%;
+            }
+            .table {
+                width: 100%;
+            }
+            .order-table {
+                width: 100%;
+            }
+            .history {
+                flex-direction: column;
+                width: 95%;
+            }
+            .navbar {
+                margin: 0;
+            }
+            .navbar div {
+                margin-right: 10px;
+            }
+            .card p {
+                font-size: 18px;
+            }
+            th, td {
+                font-size: 12px;
+                padding: 8px;
+            }
+        }
         
 </style>
 <body>
@@ -244,6 +394,11 @@
                 </div>
             </div>
         </div>
+        <div id="dropdownMenu" class="dropdownMenu">
+        <a href="#">Profile</a>
+        <a href="#">Logout</a>
+        <a href="#">Settings</a>
+    </div>
 
         <div class="container">
 
