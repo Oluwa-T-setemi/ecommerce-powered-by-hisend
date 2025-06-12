@@ -231,81 +231,6 @@
         .wallet-balance:hover{
             transform: translateY(-8px);
         }
-        @media(max-width: 555px) {
-            .container{
-                margin-top: 70px;
-                height: fit-content;
-                flex-direction: column;
-            }
-            .sidebar{
-                display: none;
-            }
-            .cta-section{
-                width: 100%;
-            }
-            .btn-section{
-                flex-direction: column;
-            }
-            .order-table table{
-                width: 95%;
-                display: block;
-                overflow-x: auto;
-            }
-            .wallet-section{
-                flex-direction: column;
-            }
-            .nav{
-                position: fixed;
-            }
-            .order-quantity{
-                width: 80%;
-            }
-            .wallet-balance{
-                width: 80%;
-                margin-bottom: 30px;
-            }
-            .navbar{
-                width: 100%;
-                justify-content: space-between;
-                padding: 10px;
-            }
-            #hamburger{
-                display: initial;
-            }
-            .btn img{
-            display: none;
-            }
-            .logo-container{
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            }
-            .links .btn:hover{
-            background-color: transparent;
-            transform: none;
-            }
-            .btn:hover a{
-            color: white;
-            }
-            .links{
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            }
-            .sidebar{
-            position:fixed;
-            width: 75%;
-            height: 55vh;
-            top: 13%;
-            left: 13%;
-            z-index: 99;
-            padding: 20px;
-            border-radius: 10px;
-            }
-        }
         
 </style>
 <body>
@@ -318,6 +243,11 @@
                 </div>
             </div>
         </div>
+        <div id="dropdownMenu" class="dropdownMenu">
+        <a href="#">Profile</a>
+        <a href="#">Logout</a>
+        <a href="#">Settings</a>
+    </div>
 
         <div class="container">
 
