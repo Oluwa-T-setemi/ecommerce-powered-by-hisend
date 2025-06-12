@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Set Password</title>
+    <title>Verify E-mail</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
@@ -24,21 +24,19 @@
         align-items: center;
     }
     .container{
-        height: 60%;
+        height: fit-content;
         width: 30%;
         display: flex;
         justify-content: space-between;
         align-items: center;
         flex-direction: column;
         font-family: "Red Hat Text", sans-serif;
-        box-shadow: 0 0 10px hsl(14, 25%, 72%);
-        padding: 20px;
-        border-radius: 15px;
     }
     img{
         display: inline;
         border-radius: 50%;
         width: 20%;
+        margin: 20px 0;
     }
     .otp-section{
         height: fit-content;
@@ -59,12 +57,10 @@
         display: inline-block;
         transform: translateY(0);
         color: hsl(14, 65%, 9%);
-        font-size: 16px;
-        font-weight: 500;
     }
     fieldset{
         border-radius: 10px;
-        margin: 20px 0;
+        margin: 15px 0;
         width: 100%;
         height: 20px;
         padding-top: 30px;
@@ -106,7 +102,6 @@
         font-size: 14px;
         font-weight: 500;
         color: black;
-        margin-top: 20px;
     }
     button{
         width: 80%;
@@ -127,43 +122,31 @@
         color: hsl(14, 78%, 52%);
         box-shadow: 0 0 10px hsl(14, 86%, 42%);
     }
-    h1{
-        margin-top: 20px 0;
-    }
     @media (max-width: 768px){
         .container{
             width: 90%;
         }
     }
-    @media (max-width: 1210px){
+    @media (max-width: 898px){
         .container{
-            height: fit-content;
+            width: 70%;
         }
     }
 </style>
 <body>
     <div class="container">
-            <h1>Reset Password</h1>
-            <p>Enter the code sent to name@example.com.</p>
+        <img src="/assets/images/WhatsApp Image 2025-05-21 at 14.08.14_c69d5989.jpg" alt="">
+        <div class="otp-section">
+            <h1>Email Verification</h1>
+            <p>Enter the OTP sent to your Email.</p>
 
             <fieldset>
                 <legend>OTP<span>*</span></legend>
-                <input class="input" type="tel" placeholder="Enter the six-digits OTP">
+                <input class="input" type="email" placeholder="Enter the six six-digits OTP">
             </fieldset>
 
-            <fieldset>
-                <legend>New Password<span>*</span></legend>
-                <input class="input" type="email" placeholder="Enter your new Password">
-            </fieldset>
-
-            <fieldset>
-                <legend>Confirm Password<span>*</span></legend>
-                <input class="input" type="email" placeholder="Confirm your password">
-            </fieldset>
-
-            <p>Didn't get a code? <a href="/new_password.html">Resend OTP</a></p>
-
-            <button>Reset</button>
+            <button>Submit</button>
+        </div>
     </div>
 </body>
 </html>

@@ -559,6 +559,16 @@ button img {
     opacity: 1;
     transform: translateY(0);
   }
+
+  .mobile-log button{
+    margin-bottom:200px ;
+    background-color: none;
+    border: none;
+  }
+  .footer p {
+    font-size: 14px;
+  
+  }
 }
 
 @keyframes slideUp {
