@@ -65,9 +65,9 @@
          #hamburger {
             display: none;
             cursor: pointer;
-            padding: 12px;
+            height: 40px;
+            width: 40px;
             border-radius: 8px;
-            background-color: hsl(14, 80%, 15%);
             transition: all 0.3s ease;
         }
         .container{
@@ -132,7 +132,9 @@
             width: fit-content;
             height: fit-content;
             margin: 20px auto;
+            display: flex;
             flex-direction: row;
+            gap: 10px;
         }
         .card{
             padding: 10px 20px;
@@ -197,6 +199,7 @@
             align-items: center;
             justify-content: center;
             gap: 20px;
+            margin-top: 60px;
         }
         .order-quantity{
             width: 30%;
@@ -204,8 +207,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            margin-top: 60px;
+            justify-content: center; 
             background-color: hsl(14, 60%, 20%);
             color: white;
             border-radius: 15px;
@@ -221,7 +223,6 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            margin-top: 60px;
             background-color: hsl(14, 60%, 20%);
             color: white;
             border-radius: 15px;
@@ -230,165 +231,13 @@
         .wallet-balance:hover{
             transform: translateY(-8px);
         }
-
-    #dropdownButton {
-      position: relative;
-    }
-
-    #dropdownMenu {
-      display: block;
-      position: absolute;
-      top: 10%; /* Below the A button */
-      right: 0;
-      background-color: hsl(14, 65%, 9%);
-      width: 160px;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-      z-index: 1000;
-    }
-
-    #dropdownMenu a {
-      color: white;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-    }
-
-    #dropdownMenu a:hover {
-      background-color: hsl(14, 25%, 72%);
-    }
-
-
-          @media (max-width: 768px) {
-            #hamburger {
-                display: block;
-                margin: 0 20px 0 0;
-            }
-            .setting img, .logout img, .profile img {
-                width: 32px;
-                height: 32px;
-                margin-right: 15px;
-                margin-bottom: 5px;
-            }
-            .Home img {
-                width: 32px;
-                height: 32px;
-                margin-right: 15px;
-                margin-bottom: 5px;
-            }
-            .sidebar {
-                display: none;
-                flex-direction: column;
-                background: linear-gradient(180deg, hsl(14, 80%, 12%), hsl(14, 60%, 20%));
-                position: fixed;
-                top: 70px;
-                left: 0;
-                width: 100%;
-                z-index: 1001;
-                padding: 20px;
-            }
-            .sidebar.active {
-                display: flex;
-                overflow: hidden;
-            }
-            .close-sidebar {
-                display: block;
-            }
-            .navbar {
-                left: 0;
-                margin: 0;
-                justify-content: space-between;
-                align-items: center;
-            }
-            .content {
-                margin-left: 0;
-                padding: 80px 15px;
-            }
-            .navbar div {
-                margin-right: 20px;
-            }
-            .card-container {
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                width: 90%;
-                margin-top: 50px;
-            }
-            .card {
-                width: 100%;
-            }
-            .cardh {
-                width: 100%;
-            }
-            .history {
-                flex-direction: column;
-                width: 90%;
-                margin-left: 5%;
-                gap: 15px;
-            }
-            .cardh:hover {
-                background-color: hsl(14, 25%, 72%);
-                color: white;
-                border-radius: 50px;
-            }
-            .card p {
-                font-size: 20px;
-            }
-            th, td {
-                font-size: 14px;
-                padding: 10px;
-            }
-            .setting img, .logout img, .profile img {
-                width: 32px;
-                height: 32px;
-                margin-right: 15px;
-                margin-top: 0;
-            }
-        }
-
-        @media (max-width: 500px) {
-            .card h1 {
-                font-size: 28px;
-            }
-            .card-container {
-                width: 95%;
-            }
-            .wallet-table {
-                display: none;
-                width: 100%;
-            }
-            .table {
-                width: 100%;
-            }
-            .order-table {
-                width: 100%;
-            }
-            .history {
-                flex-direction: column;
-                width: 95%;
-            }
-            .navbar {
-                margin: 0;
-            }
-            .navbar div {
-                margin-right: 10px;
-            }
-            .card p {
-                font-size: 18px;
-            }
-            th, td {
-                font-size: 12px;
-                padding: 8px;
-            }
-        }
         
 </style>
 <body>
     <main>
         <div class="nav">
             <div class="navbar">
-                <div id="hamburger">
-                    <img src="assets/images/hamburger (1).png" alt="menu" />
-                </div>
+                    <img src="assets/images/hamburger (1).png" alt="menu" id="hamburger">
                 <div id="dropdownButton">
                     <h1>A</h1>
                 </div>
@@ -404,9 +253,11 @@
 
             <div class="sidebar" id="sidebar">
                 <div style="margin-bottom: 350px;">
-                    <img src="assets/images/ChatGPT Image May 21, 2025, 12_33_55 PM.png" alt="" class="logo">
+                    <div class="logo-container">
+                        <img src="assets/images/ChatGPT Image May 21, 2025, 12_33_55 PM.png" alt="" class="logo">
+                    </div>
 
-                    <div>
+                    <div class="links">
                         <button class="btn">
                             <img src="assets/images/user (1).png" alt="">
                             <a href="#">Profile</a>
@@ -421,7 +272,7 @@
                         </button>
                         <button class="btn">
                             <img src="assets/images/home (2).png" alt="">
-                            <a href="#">Home</a>
+                            <a href="/index.html">Home</a>
                         </button>
                     </div>
                 </div>
